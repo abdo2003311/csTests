@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const jsx_runtime_1 = require("react/jsx-runtime");
+let AdminDashboardUserView = (props) => {
+    let { userName, email, comments, publishedArticles, publishedTests, createdAt, image } = props.user;
+    let handleDelete = () => { };
+    return ((0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "adminDashboardUserViewWrapper" }, { children: [(0, jsx_runtime_1.jsx)("img", { src: image.src, alt: "nothing" }), (0, jsx_runtime_1.jsxs)("div", Object.assign({ className: "adminDashboardUserView" }, { children: [(0, jsx_runtime_1.jsxs)("header", { children: [(0, jsx_runtime_1.jsx)("span", Object.assign({ className: "key" }, { children: "Name" })), (0, jsx_runtime_1.jsx)("i", { className: "bi bi-x-lg", onClick: handleDelete })] }), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "val" }, { children: userName })), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "key" }, { children: "created at" })), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "val" }, { children: createdAt })), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "key" }, { children: "email" })), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "val" }, { children: email })), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "key" }, { children: "comments" })), (0, jsx_runtime_1.jsx)("span", { children: comments.length }), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "key" }, { children: "publishedArticles" })), (0, jsx_runtime_1.jsx)("span", { children: publishedArticles.length }), (0, jsx_runtime_1.jsx)("span", Object.assign({ className: "key" }, { children: "publishedTests" })), (0, jsx_runtime_1.jsx)("span", { children: publishedTests.length })] }))] })));
+};
+exports.default = AdminDashboardUserView;

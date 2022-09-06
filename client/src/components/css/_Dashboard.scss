@@ -1,0 +1,154 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1vw;
+    align-items: flex-start;
+    margin: 1vw 4vw;
+}
+.dashboard, .editPages {
+    .articlesForm, .testsForm{
+        margin-bottom: 1vw;
+        box-shadow: .1vw .1vw 1vw .1vw #ccc;
+        h2 {
+            background-color: $gray;
+            color: #fff;
+            padding: 1vw;
+        }
+        form {
+            padding: 1vw;
+            input, button {
+                display: block;
+                margin: 1vw auto;
+                width: 98%;
+                padding: 1vw;
+                transition: .3s;
+                border-radius: 1vw;
+                border: none;
+                box-shadow: .1vw .1vw .5vw .1vw #ccc;
+                &:hover {
+                    box-shadow: .1vw .1vw .1vw .1vw #ccc;
+                }
+                &:focus-visible {
+                    border: none !important;
+                    outline: none;
+                }
+            }
+            button {
+                background-color: $purple;
+                color: #fff;
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgb(58, 231, 0);
+                }
+            }
+        }
+    }
+}
+
+.questionForm, .answerForm {
+    & > header {
+        display: flex;
+        padding: 0 1vw;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            border-radius: 50%;
+            display: flex;
+            width: 1vw;
+            height: 1vw;
+            padding: 1vw;
+            font-size: 1vw;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+            background: $purple;
+            color: #fff;
+            &:hover {
+                cursor: pointer;
+                background-color: $gray;
+            }
+        }
+    }
+}
+.solvedTests {
+    padding: .5vw 4vw;
+    display: block;
+    width: 100%;
+    h3{
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+        letter-spacing: .3vw;
+        font-size: 1.6vw;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif !important;
+        text-transform: uppercase;
+        color: rgb(43, 75, 234);
+    }
+    .solvedTest {
+        box-shadow: .1vw .1vw 1vw .1vw #ccc;
+        line-height: 1;
+        border-radius: 2vw;
+        padding: 2vw;
+        background-color: $purple;
+        color: #fff;
+        margin-bottom: 1vw;
+        width: 100%;
+        span {
+            font-family: Poppins !important;
+            padding: .8vw;
+            display: block;
+            letter-spacing: .2vw;
+            text-transform: uppercase;
+        }
+        a {
+            color: #fff;
+        }
+    }
+}
+.dashboardArticles, .dashboardTests {
+    .dashboardArticleView, .dashboardTestView {
+        box-shadow: .1vw .1vw 1vw .1vw #ccc;
+        line-height: 2;
+        border-radius: 2vw;
+        padding: 2vw;
+        background-color: $purple;
+        color: #fff;
+        margin-bottom: 1vw;
+        width: 100%;
+        span, a{
+            font-family: Poppins !important;
+            padding: .8vw;
+            display: block;
+            letter-spacing: .2vw;
+            text-transform: uppercase;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+                border-radius: 50%;
+                display: flex;
+                width: 1vw;
+                height: 1vw;
+                padding: 1vw;
+                font-size: 1vw;
+                justify-content: center;
+                align-items: center;
+                transition: .3s;
+                background: $purple;
+                color: #fff;
+                &:hover {
+                    cursor: pointer;
+                    background-color: #fff;
+                    color: $purple;
+                }
+            }
+        }
+       
+        a {
+            color: #fff;
+            display: block;
+        }
+    }
+}

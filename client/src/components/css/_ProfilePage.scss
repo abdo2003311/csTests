@@ -1,0 +1,128 @@
+.profilePage {
+    .wrapper {
+        padding: 1vw 4vw;
+        display: grid;
+        grid-template-areas: 
+            "l l l l l i i"
+            "l l l l l i i"
+            "l l l l l s s"
+            "l l l l l s s";
+            grid-column-gap: 3vw;
+        .l {
+            box-shadow: .1vw .1vw 1vw .1vw #ccc;
+            position: relative;
+            line-height: 1;
+            border-radius: 2vw;
+            padding: 2vw;
+            grid-area: l;
+            background-color: $purple;
+            color: #fff;
+            padding-top: 8vw;
+            span {
+                font-family: Poppins !important;
+                padding: .8vw;
+                display: block;
+                letter-spacing: .2vw;
+            }
+            .key {
+                padding-bottom: 1vw;
+                text-transform: uppercase;
+            }
+            .val {
+                display: block;
+                margin-bottom: 2vw;
+            }
+        }
+        .i {
+            grid-area: i;
+            img {
+                border-radius: 2vw;
+                width: 100%;
+                height: 40vw;
+                box-shadow: .1vw .1vw 1vw .1vw #ccc;
+            }
+        }
+        .statistics {
+            letter-spacing: .2vw;
+            display:grid;
+            column-gap: 3vw;
+            grid-template-columns: 1fr 1fr;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-top: 3vw;
+    
+            span:first-of-type {
+                font-size: 1.5vw;
+                color: rgb(43, 75, 234);
+                font-family: 'Montserrat', sans-serif !important;
+    
+            }
+            span:last-of-type {
+                color: $purple;
+                display: block;
+                padding: 1.5vw 0 5vw;
+                font-size: 7vw;
+                font-family: 'Montserrat', sans-serif !important;
+            }
+            margin: 2vw;
+            grid-area: s;
+            button, a{
+                box-shadow: .1vw .1vw 1vw .1vw #ccc;
+                font-weight: 300;
+                text-transform: uppercase;
+                background-color: #fff;
+                border: none;
+                text-align: left;
+                font-size: 1.5vw;
+                background-color: $purple;
+                color: #fff;
+                padding: 1vw;
+                text-decoration: none;
+                cursor: pointer;
+                transition: .1s;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    background-color: #fff;
+                    color: $purple;
+                }
+            }
+        }
+    }
+    h3{
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+        letter-spacing: .3vw;
+        font-size: 1.6vw;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif !important;
+        text-transform: uppercase;
+        color: rgb(43, 75, 234);
+    }
+    .solvedTests {
+        padding: .5vw 4vw;
+        display: block;
+        width: 100%;
+       
+        .solvedTest {
+            box-shadow: .1vw .1vw 1vw .1vw #ccc;
+            line-height: 1;
+            border-radius: 2vw;
+            padding: 2vw;
+            background-color: $purple;
+            color: #fff;
+            margin-bottom: 1vw;
+            width: 100%;
+            span {
+                font-family: Poppins !important;
+                padding: .8vw;
+                display: block;
+                letter-spacing: .2vw;
+                text-transform: uppercase;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+}

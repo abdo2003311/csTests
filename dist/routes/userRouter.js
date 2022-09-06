@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const deleteUser_1 = __importDefault(require("../controllers/deleteUser"));
+const getPublicUser_1 = __importDefault(require("../controllers/getPublicUser"));
+const getUser_1 = __importDefault(require("../controllers/getUser"));
+const getUserId_1 = __importDefault(require("../controllers/getUserId"));
+const logIn_1 = __importDefault(require("../controllers/logIn"));
+const newUser_1 = __importDefault(require("../controllers/newUser"));
+const solveTest_1 = __importDefault(require("../controllers/solveTest"));
+const updateUser_1 = __importDefault(require("../controllers/updateUser"));
+const userAuthorization_1 = __importDefault(require("../controllers/userAuthorization"));
+const router = express_1.default.Router();
+router.post('/signUp', newUser_1.default);
+router.put('/:userName', userAuthorization_1.default, updateUser_1.default);
+router.post('/logIn', logIn_1.default);
+router.delete('/:userName', userAuthorization_1.default, deleteUser_1.default);
+router.get('/:userName', userAuthorization_1.default, getUser_1.default);
+router.get('/public/:userId', getPublicUser_1.default);
+router.get('/getId/:userName', userAuthorization_1.default, getUserId_1.default);
+router.post('/:userName/solveTest/:id', userAuthorization_1.default, solveTest_1.default);
+exports.default = router;

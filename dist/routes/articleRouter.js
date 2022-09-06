@@ -1,0 +1,25 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const deleteArticle_1 = __importDefault(require("../controllers/deleteArticle"));
+const deleteComment_1 = __importDefault(require("../controllers/deleteComment"));
+const getArticle_1 = __importDefault(require("../controllers/getArticle"));
+const getArticles_1 = __importDefault(require("../controllers/getArticles"));
+const newArticle_1 = __importDefault(require("../controllers/newArticle"));
+const newComment_1 = __importDefault(require("../controllers/newComment"));
+const updateArticle_1 = __importDefault(require("../controllers/updateArticle"));
+const updateComment_1 = __importDefault(require("../controllers/updateComment"));
+const userAuthorization_1 = __importDefault(require("../controllers/userAuthorization"));
+const router = express_1.default.Router();
+router.post('/:userName', userAuthorization_1.default, newArticle_1.default);
+router.get('/', getArticles_1.default);
+router.get('/:id', getArticle_1.default);
+router.put('/:id/:userName', userAuthorization_1.default, updateArticle_1.default);
+router.post('/:id/comment/:userName', userAuthorization_1.default, newComment_1.default);
+router.put('/:id/updateComment/:userName', userAuthorization_1.default, updateComment_1.default);
+router.delete('/:id/deleteComment/:userName', userAuthorization_1.default, deleteComment_1.default);
+router.delete('/:id/:userName', userAuthorization_1.default, deleteArticle_1.default);
+exports.default = router;

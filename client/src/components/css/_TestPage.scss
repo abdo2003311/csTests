@@ -1,0 +1,91 @@
+.test {
+    position: relative;
+    margin: 2vw;
+    padding: 2vw;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-shadow: .1vw .1vw 1vw .1vw #ccc;
+    background-color: $purple;
+    color: #fff;
+    .createdAt {
+        font-family: Poppins !important;
+        position: absolute;
+        top:2vw;
+        right: 2vw;
+        padding-top: .5vw;        
+    }
+    button {
+        background-color: #6d0dfd;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 800;
+        display: block;
+        width: 100%;
+        padding: 1vw;
+        border-radius: 2vw;
+        background-color: #fff;
+        color: $purple;
+        border: none;
+        font-family: 'Montserrat', sans-serif !important;
+        transition: .1s;
+        &:hover {
+            cursor: pointer;
+            background-color: $purple;
+            color: #fff;
+        }
+    }
+    header {
+        padding: 1vw;
+    }
+    h2{
+        text-transform: uppercase;
+        font-family: Poppins !important;
+        letter-spacing: .2vw;
+        font-weight: 300;
+    }
+    p {
+        font-family: Poppins !important;
+    }
+    footer {
+        padding-top: 3vw;
+        a {
+            font-family: Poppins !important;
+            float: right;
+            color: #fff;
+        }
+    }
+    
+    .question {
+        margin-bottom: 1vw;
+        overflow: hidden;
+        
+        header {
+            background-color: #fff;
+            color: $purple;
+            border-radius: 2vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            h2 {
+                padding: 1vw;
+            }
+        }
+        p {
+            padding: 1vw;
+        }
+        .answer {
+            cursor: pointer;
+            transition: .3s;
+            border-radius: 2vw;
+            border: .4vw solid #fff;
+            background-color: $purple;
+            color: #fff;
+            margin-bottom: 1vw;
+            &:hover {
+                background-color: #fff;
+                color: $purple;
+            }
+        }
+    }
+}

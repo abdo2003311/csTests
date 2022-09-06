@@ -1,0 +1,59 @@
+.testsPage {
+    .active {
+        display: block;
+    }
+    & > i {
+        margin: 0vw 2vw 0vw auto;
+        border-radius: 50%;
+        display: flex;
+        width: 2vw;
+        height: 2vw;
+        padding: 1.5vw;
+        font-size: 2vw;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        background: $purple;
+        color: #fff;
+        &:hover {
+            cursor: pointer;
+            background: #fff;
+            color: $purple;
+        }
+    }
+    .testView {
+        position: relative;
+        margin: 2vw;
+        padding: 2vw;
+        border-radius: 2vw;
+        overflow: hidden;
+        box-shadow: .1vw .1vw 1vw .1vw #ccc;
+        background-color: $purple;
+        color: #fff;
+        h2{
+            text-transform: uppercase;
+            font-family: Poppins !important;
+            letter-spacing: .2vw;
+            font-weight: 300;
+        }
+        p {
+            font-family: Poppins !important;
+        }
+        .createdAt {
+            font-family: Poppins !important;
+            position: absolute;
+            top:2vw;
+            right: 2vw;
+            padding-top: .5vw;        
+        }
+        footer {
+            padding-top: 3vw;
+            a {
+                font-family: Poppins !important;
+
+                float: right;
+                color: #fff;
+            }
+        }
+    }
+}

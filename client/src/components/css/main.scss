@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+$purple : #6d0dfd;
+$gray : rgb(97, 88, 97);
+
+.mainHeader {
+    margin: auto;
+    width: 95%;
+    font-size: 1.2vw;
+    color: rgb(60, 60, 60);
+    font-weight: 400;
+    nav {
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1vw 1vw;
+        span , a{
+            padding: 1vw;
+            text-decoration: none;
+        }
+        span {
+            color: #5472db !important;
+            font-size: 2vw;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        a{
+            padding-right: 2vw;
+            transition: .3s;
+            &:hover {
+                background-color: #fff;
+                color: #db545a !important;
+            }
+        }
+        .active {
+            color: #db545a !important;
+        }
+    }
+}
+
+.body {
+    overflow-x: hidden
+}
+
+@import '_ArticlesPage.scss';
+@import '_ArticlePage.scss';
+@import '_TestsPage.scss';
+@import '_TestPage.scss';
+@import '_Dashboard.scss';
+@import '_ProfilePage.scss';
+@import '_SignUpAndLogInAndEditUserPage.scss';
+@import '_HomePage.scss';
+@import '_PublishOrUpdateArticle.scss';
+@import '_PublishOrUpdateTest.scss';
+@import '_AdminDashboard.scss';
